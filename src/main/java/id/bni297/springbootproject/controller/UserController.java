@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+//@CrossOrigin(origins = "http://localhost:5500")
 @RequestMapping("/users")
 public class UserController {
     private final UserService userService;
@@ -22,6 +23,7 @@ public class UserController {
     public User createUser(@RequestBody User user){
         return userService.createUSer(user);
     }
+
 
     @GetMapping
     public List<User> getAllUsers(){
